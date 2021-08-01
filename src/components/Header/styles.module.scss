@@ -19,11 +19,12 @@
     a {
       display: inline-block;
       position: relative;
+
       padding: 0 0.5rem;
       height: 5rem;
       color: var(--gray-300);
-
-      transition: color 0.2s;
+      line-height: 5rem;
+      transition: 0.2s;
 
       & + a {
           margin-left: 2rem;
@@ -39,7 +40,7 @@
       }
 
       &.active::after {
-          content:''; //@error Posso escrever qualquer coisa aqui no meu content 
+          content:''; //Posso escrever qualquer coisa aqui no meu content 
           height: 3px;
           border-radius: 3px 3px 0 0;
           width:100%;
@@ -47,9 +48,11 @@
           bottom: 1px;
           left: 0;
           background: var(--yellow-500);
-
-
       }
     }
+  }
+
+  button {
+    margin-left: auto;
   }
 }

@@ -1,22 +1,18 @@
-import React from "react";
 import Image from 'next/image'
-import styles from '../Header/styles.module.scss';
-import { SignInButton } from "../SignInButton";
+import styles from './styles.module.scss';
+import { SignInButton } from "./SignInButton";
+import logo from '../../../public/images/logo.svg';
 
 export function Header() {
     return (
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
-                <Image 
-                src="/images/logo.svg"
-                width="336"
-                height="521" 
-                alt="ig.news" />
+            <Image src={logo} alt="Ignews" />    
                 <nav>
                     <a className={styles.active}>Home</a>
-                    <a>Posts</a>
+                    <a  >Posts</a>
                 </nav>
-                <SignInButton />
+                <SignInButton /> 
             </div>
         </header>
     );
