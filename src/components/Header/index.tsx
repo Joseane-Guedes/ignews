@@ -10,7 +10,7 @@ export function Header() {
             <Image src={logo} alt="Ignews" />    
                 <nav>
                     <a className={styles.active}>Home</a>
-                    <a  >Posts</a>
+                    <a >Posts</a>
                 </nav>
                 <SignInButton /> 
             </div>
