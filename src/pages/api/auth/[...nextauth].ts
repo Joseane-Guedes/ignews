@@ -35,7 +35,7 @@ export default NextAuth({
 
         return true;
       } catch (err) {
-        console.log("fauna", err);_
+        console.log("fauna", err);
         return false;
       }
     },
