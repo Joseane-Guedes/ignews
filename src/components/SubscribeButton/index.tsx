@@ -9,8 +9,7 @@ interface SubscribeButtonProps {
   priceId: string;
 }
 
-export function SubscribeButton({ priceId }:
-  SubscribeButtonProps) {
+export function SubscribeButton({ priceId }: SubscribeButtonProps) {
   const [session] = useSession();
   const router = useRouter()
 
@@ -19,12 +18,13 @@ export function SubscribeButton({ priceId }:
       signIn('github');
       return;
     }
-
+    console.log(session)
+    console.log(session?.activeSubscription)
+    
     if (session.activeSubscription) {
       router.push('/posts');
       return;
-
-    }
+  }
 
     try {
       const response = await api.post('/subscribe')

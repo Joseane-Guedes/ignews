@@ -18,7 +18,7 @@ async function buffer(readable: Readable) {
 
 export const config = {
     api: {
-        bodyParser: false
+        bodyParser: false,
     }
 }
 
@@ -47,7 +47,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (relevantEvents.has(type)) {
        try {
         switch (type) {
-        case 'customer.subscription.created':
+        case 'customer.subscription.updated':
         case 'customer.subscription.deleted':  
             const subscription = event.data.object as Stripe.Subscription;
         
@@ -73,9 +73,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         }
        } catch (err) {
            return res.json({ error: 'Webhook handler failed.'})
+          
        }
     }
-
+    
     res.json({ received: true })
 } else {
     res.setHeader('Allow', 'POST')
