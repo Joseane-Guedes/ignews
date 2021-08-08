@@ -25,7 +25,7 @@ export default NextAuth({
                  "ref",
                  q.Get(
                    q.Match(
-                     q.Index('user_by-email'),
+                     q.Index('user_by_email'),
                      q.Casefold(session.user.email)
                    )
                  )
@@ -43,7 +43,7 @@ export default NextAuth({
     ...session,
     activeSubscription: userActiveSubscription
         }
-      } catch {
+      } catch (err) {
         return {
           ...session,
           activeSubscription: null,
@@ -69,8 +69,7 @@ export default NextAuth({
         );
 
         return true;
-      } catch (err) {
-        console.log("fauna", err);
+      } catch {
         return false;
       }
     },

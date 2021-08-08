@@ -44,12 +44,12 @@ const subscriptionData = {
                 q.Get(
                     q.Match(
                         q.Index('subscription_by_id'),
-                        subscriptionId,
+                        subscriptionId
                     )
                 )
             ),
             { data: subscriptionData }
-        )
+        ),
      )
   }
 }
