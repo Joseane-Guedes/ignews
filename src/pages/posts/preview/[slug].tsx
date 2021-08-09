@@ -29,7 +29,7 @@ export default function PostPreview({ post }: PostPreviewProps) {
       router.push(`/posts/${post.slug}`)
     }
 
-  }, [session])
+  }, [post.slug, router, session])
 
 
   return (
@@ -59,11 +59,10 @@ export default function PostPreview({ post }: PostPreviewProps) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [],
+    paths: [ ],
     fallback: 'blocking'
   }
 }
-
 
 export const getStaticProps: GetStaticProps= async ({ params }) => {
   const { slug } = params;
@@ -88,5 +87,6 @@ export const getStaticProps: GetStaticProps= async ({ params }) => {
     props: {
       post,
     },
+    redirect: 60 * 30, //30 minutos
   };
 };
