@@ -3,8 +3,8 @@
 <h1 align="center">  ig.news 📰   </h1> 
 
 <p align="center">	
-   <img alt="repo size" src="https://img.shields.io/github/repo-size/Joseane-Guedes/ignews" />
-    <img alt="issues" src="https://img.shields.io/github/issues/Joseane-Guedes/ignews" />
+  <img alt="repo size" src="https://img.shields.io/github/repo-size/Joseane-Guedes/ignews" />
+  <img alt="issues" src="https://img.shields.io/github/issues/Joseane-Guedes/ignews" />
   <img alt="forks" src="https://img.shields.io/github/forks/Joseane-Guedes/ignews"/>
   <img alt="Stars" src="https://img.shields.io/github/stars/Joseane-Guedes/ignews" />
   <img alt="Twitter" src="https://img.shields.io/twitter/follow/JoseaneGuedes8?style=social">
