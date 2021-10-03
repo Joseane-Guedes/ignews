@@ -1,19 +1,16 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link'
-
-import { SignInButton } from "./SignInButton";
-
-import Image from 'next/image'
-import logo from '../../../public/images/logo.svg';
-import styles from './styles.module.scss';
+/* eslint-disable @next/next/no-img-element */
 import { ActiveLink } from '../ActiveLink';
+import { SignInButton } from "./SignInButton";
+import styles from './styles.module.scss';
+
+
 
 export function Header() {
    
     return (
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
-                <Image src={logo} alt="Ignews" />
+                <img src="/images/logo.svg" alt="Ignews" />
                 <nav>
                     <ActiveLink activeClassName={styles.active} href='/'>
                         <a >Home</a>

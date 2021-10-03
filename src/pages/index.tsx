@@ -1,10 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { SubscribeButton } from '../components/SubscribeButton';
 import { stripe } from '../services/stripe';
-import Image from 'next/image';
-import avatar from '../../public/images/avatar.svg'
-
 import styles from './home.module.scss';
 
 interface HomeProps {
@@ -31,7 +29,7 @@ export default function Home({product}: HomeProps) {
           <SubscribeButton priceId={product.priceId} />
         </section>
        
-        <Image src={avatar} alt="coding" />
+        <img src="/images/avatar.svg" alt="woman coding" />
       </main>
     </>
   )
